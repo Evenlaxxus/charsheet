@@ -34,11 +34,11 @@
     </v-app-bar>
 
     <v-content>
-      <v-layout align-start>
-        <v-flex>
+      <v-layout row fluid>
+        <v-flex ml2 md6 sm4 xs6 align-self-start>
           <Abilities />
         </v-flex>
-        <v-flex>
+        <v-flex ml2 md5 sm4 xs6 align-self-start>
           <Skills />
         </v-flex>
       </v-layout>

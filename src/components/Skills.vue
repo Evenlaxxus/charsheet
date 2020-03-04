@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <v-layout row align-start v-for="item in skills" :key="item.name">
-      <v-flex md2 xs1 class="mt-4 mr-5">
+    <v-layout row fluid v-for="item in skills" :key="item.name">
+      <v-flex md3 xs4 class="mt-4 mr-5">
         {{ item.name }}
       </v-flex>
-      <v-flex md1 ml1 xs2 class="mt-1">
+      <v-flex ml1 md2 sm4 xs3 class="mt-1">
         <v-text-field
           class="compact-form"
           outlined

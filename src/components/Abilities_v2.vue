@@ -1,31 +1,39 @@
 <template>
   <v-container>
-    <v-layout row align-start v-for="item in abilities" :key="item.name">
-      <v-flex md2 xs1 class="mt-4 mr-5" hidden-sm-and-down>
-        {{ item.name }}
-      </v-flex>
-      <v-flex md1 ml1 xs1 class="mt-4 mr-5" hidden-md-and-up>
-        {{ item.short }}
-      </v-flex>
-      <v-flex md1 ml1 xs2 class="mt-1">
-        <v-text-field
-          class="compact-form"
-          outlined
-          :maxlength="2"
-          v-model="item.score"
-        ></v-text-field>
-      </v-flex>
-      <v-flex xs2 class="mt-1">
-        <v-img
-          height="40"
-          width="30"
-          contain
-          src="img/k20.png"
-          v-on:click="random"
-        >
-        </v-img>
-      </v-flex>
-    </v-layout>
+    <div>
+      <v-layout
+        row
+        align-start
+        v-for="item in abilities"
+        :key="item.name"
+        class="mx-0"
+      >
+        <v-flex md2 xs1 class="mt-4 mr-5" hidden-sm-and-down>
+          {{ item.name }}
+        </v-flex>
+        <v-flex md1 ml1 xs1 class="mt-4 mr-5" hidden-md-and-up>
+          {{ item.short }}
+        </v-flex>
+        <v-flex ml1 md2 sm4 xs3 class="mt-1">
+          <v-text-field
+            class="compact-form"
+            outlined
+            :maxlength="2"
+            v-model="item.score"
+          ></v-text-field>
+        </v-flex>
+        <v-flex xs2 class="mt-1 ml-1">
+          <v-img
+            height="40"
+            width="30"
+            contain
+            src="img/k20.png"
+            v-on:click="random"
+          >
+          </v-img>
+        </v-flex>
+      </v-layout>
+    </div>
   </v-container>
 </template>
 
