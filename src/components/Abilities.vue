@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <v-row v-for="item in abilities" :key="item.name">
-      <v-col cols="3">
+      <v-col cols="6" class="pr-0">
         <v-card raised class="mt-1 pb-0">
-          <v-col>
-            <v-card-title class="py-0">
+          <v-col class="pa-0">
+            <v-card-title class="pa-0">
               <v-row align="center">
                 <v-col cols="5" class="pl-5 mr-0 pr-0">
                   {{ item.name }}
@@ -19,12 +19,38 @@
                 </v-col>
               </v-row>
             </v-card-title>
-            <v-card-text>
+            <v-card-text class="pa-0">
               <div align="center" class="title">+1</div>
             </v-card-text>
-            <v-card-actions>
+            <v-card-actions class="pa-0">
               <v-btn text>Throw</v-btn>
             </v-card-actions>
+          </v-col>
+        </v-card>
+      </v-col>
+      <v-col cols="6" class="pl-1">
+        <v-card raised class="mt-1 pb-0">
+          <v-col>
+            <v-card-text>
+              <v-row
+                v-for="skill in item.skills"
+                :key="skill.name"
+                class="caption"
+                align="center"
+              >
+                <v-col cols="6" class="mx-0 pa-0">
+                  {{ skill.name }}
+                </v-col>
+                <v-col cols="6" class="mt-0 pt-0 pa-0">
+                  <v-text-field
+                    class="skill_text_field"
+                    outlined
+                    :maxlength="2"
+                    v-model="skill.score"
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+            </v-card-text>
           </v-col>
         </v-card>
       </v-col>
@@ -200,6 +226,14 @@ export default {
 </script>
 
 <style lang="scss">
+.skill_text_field input {
+  font-size: 10pt;
+}
+.skill_text_field {
+  height: 60px;
+  transform: scale(0.5);
+  transform-origin: left;
+}
 .v-text-field input {
   font-size: 20pt;
 }

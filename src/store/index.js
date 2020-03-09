@@ -4,8 +4,43 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+  state: {
+    drawer: false,
+    routes: [
+      {
+        text: "Home",
+        to: "/"
+      },
+      {
+        text: "Fight",
+        to: "/fight"
+      },
+      {
+        text: "Spells",
+        to: "/spells"
+      },
+      {
+        text: "Feats",
+        to: "/feats"
+      },
+      {
+        text: "Inventory",
+        to: "/inventory"
+      },
+      {
+        text: "About",
+        to: "/about"
+      }
+    ]
+  },
+  getters: {
+    routes: state => {
+      return state.routes;
+    }
+  },
+  mutations: {
+    setDrawer: (state, payload) => (state.drawer = payload),
+    toggleDrawer: state => (state.drawer = !state.drawer)
+  },
+  actions: {}
 });
