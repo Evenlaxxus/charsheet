@@ -2,9 +2,9 @@
   <v-container>
     <v-layout row fluid v-for="item in skills" :key="item.name">
       <v-flex md3 xs4 class="mt-4 mr-5">
-        {{ item.name }}
+        {{ item.name }} ({{ item.ability }})
       </v-flex>
-      <v-flex ml1 md2 sm4 xs3 class="mt-1">
+      <v-flex ml1 md2 sm4 xs3 mt-2>
         <v-text-field
           class="compact-form"
           outlined
@@ -49,7 +49,7 @@ export default {
       },
       {
         name: "Athletics",
-        ability: "Strh",
+        ability: "Str",
         score: 2
       },
       {
