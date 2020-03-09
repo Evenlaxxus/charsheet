@@ -34,12 +34,12 @@
     </v-app-bar>
 
     <v-content>
-      <v-layout row fluid>
+      <v-layout row>
         <v-flex ml2 md6 sm4 xs6 align-self-start>
           <Abilities />
         </v-flex>
         <v-flex ml2 md5 sm4 xs6 align-self-start>
-          <Skills />
+          <FightPanel />
         </v-flex>
       </v-layout>
     </v-content>
@@ -48,14 +48,14 @@
 
 <script>
 import Abilities from "./components/Abilities_v2";
-import Skills from "./components/Skills";
+import FightPanel from "./components/Fight";
 
 export default {
   name: "App",
 
   components: {
     Abilities,
-    Skills
+    FightPanel
   },
 
   data: () => ({
