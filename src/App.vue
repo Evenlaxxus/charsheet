@@ -38,24 +38,24 @@
         <v-flex ml2 md6 sm4 xs6 align-self-start>
           <Abilities />
         </v-flex>
-        <v-flex ml2 md5 sm4 xs6 align-self-start>
+        <!-- <v-flex ml2 md5 sm4 xs6 align-self-start>
           <Skills />
-        </v-flex>
+        </v-flex> -->
       </v-layout>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Abilities from "./components/Abilities_v2";
-import Skills from "./components/Skills";
+import Abilities from "./components/Abilities";
+// import Skills from "./components/Skills";
 
 export default {
   name: "App",
 
   components: {
-    Abilities,
-    Skills
+    Abilities
+    // Skills
   },
 
   data: () => ({

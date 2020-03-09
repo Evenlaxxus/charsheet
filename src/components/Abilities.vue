@@ -1,42 +1,32 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row v-for="item in abilities" :key="item.name">
       <v-col cols="3">
-        <v-expansion-panels multiple accordion>
-          <v-expansion-panel v-for="item in abilities" :key="item.name">
-            <v-expansion-panel-header>
-              <v-layout row justify-space-around>
-                <v-flex md1 class="mt-4 mr-5">{{ item.name }}</v-flex>
-                <v-flex md3 class="mt-1">
+        <v-card raised class="mt-1 pb-0">
+          <v-col>
+            <v-card-title class="py-0">
+              <v-row align="center">
+                <v-col cols="5" class="pl-5 mr-0 pr-0">
+                  {{ item.name }}
+                </v-col>
+                <v-col cols="7" class="mt-0 pt-0 mb-3">
                   <v-text-field
+                    class="compact-form"
                     outlined
-                    shaped
-                    dense
                     :maxlength="2"
                     v-model="item.score"
                   ></v-text-field>
-                </v-flex>
-              </v-layout>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <div v-for="skill in item.skills" :key="skill.name">
-                <v-layout row align-center justify-space-around>
-                  <v-flex md1>{{ skill.name }}</v-flex>
-                  <v-flex md3>
-                    <v-text-field
-                      outlined
-                      shaped
-                      dense
-                      :maxlength="2"
-                      v-model="skill.score"
-                    ></v-text-field>
-                  </v-flex>
-                </v-layout>
-                <v-divider></v-divider>
-              </div>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
+                </v-col>
+              </v-row>
+            </v-card-title>
+            <v-card-text>
+              <div align="center" class="title">+1</div>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn text>Throw</v-btn>
+            </v-card-actions>
+          </v-col>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -49,134 +39,158 @@ export default {
   data: () => ({
     abilities: [
       {
-        name: "Strength",
+        name: "Str",
         score: 1,
         skills: [
           {
             name: "Saving throw",
-            score: 1
+            score: 1,
+            prof: false
           },
           {
             name: "Athletics",
-            score: 2
+            score: 2,
+            prof: false
           }
         ]
       },
       {
-        name: "Dexterity",
+        name: "Dex",
         score: 1,
         skills: [
           {
             name: "Saving throw",
-            score: 1
+            score: 1,
+            prof: false
           },
           {
             name: "Acrobatics",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Sleight of hands",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Stealth",
-            score: 2
+            score: 2,
+            prof: false
           }
         ]
       },
       {
-        name: "Constitution",
+        name: "Con",
         score: 1,
         skills: [
           {
             name: "Saving throw",
-            score: 1
+            score: 1,
+            prof: false
           }
         ]
       },
       {
-        name: "Intelligence",
+        name: "Int",
         score: 1,
         skills: [
           {
             name: "Saving throw",
-            score: 1
+            score: 1,
+            prof: false
           },
           {
             name: "Arcana",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "History",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Investigation",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Nature",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Religion",
-            score: 2
+            score: 2,
+            prof: false
           }
         ]
       },
       {
-        name: "Wisdom",
+        name: "Wis",
         score: 1,
         skills: [
           {
             name: "Saving throw",
-            score: 1
+            score: 1,
+            prof: false
           },
           {
             name: "Animal handling",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Insight",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Medicine",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Perception",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Survival",
-            score: 2
+            score: 2,
+            prof: false
           }
         ]
       },
       {
-        name: "Charisma",
+        name: "Cha",
         score: 1,
         skills: [
           {
             name: "Saving throw",
-            score: 1
+            score: 1,
+            prof: false
           },
           {
             name: "Deception",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Intimidation",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Performance",
-            score: 2
+            score: 2,
+            prof: false
           },
           {
             name: "Persuasion",
-            score: 2
+            score: 2,
+            prof: false
           }
         ]
       }
@@ -184,3 +198,14 @@ export default {
   })
 };
 </script>
+
+<style lang="scss">
+.v-text-field input {
+  font-size: 20pt;
+}
+.compact-form {
+  height: 20px;
+  transform: scale(0.6);
+  transform-origin: left;
+}
+</style>
