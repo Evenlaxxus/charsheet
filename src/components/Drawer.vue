@@ -61,10 +61,7 @@ export default {
   bottom: 5%;
   left: 20px;
 }
-.v-list__tile--active {
-  color: orange !important;
-  caret-color: orange !important;
-}
+
 .center {
   text-align: center;
 }

@@ -60,8 +60,8 @@
             <v-card-text>
               <v-row class="ma-0">
                 <v-col cols="4">
-                  <span class="hidden-md-and-down">Success</span>
-                  <v-icon class="hidden-ml-and-up">
+                  <span class="hidden-sm-and-down">Success</span>
+                  <v-icon class="hidden-md-and-up">
                     mdi-checkbox-marked-circle
                   </v-icon>
                 </v-col>
@@ -77,8 +77,8 @@
               </v-row>
               <v-row class="ma-0">
                 <v-col cols="4">
-                  <span class="hidden-md-and-down">Fail</span>
-                  <v-icon class="hidden-ml-and-up">
+                  <span class="hidden-sm-and-down">Fail</span>
+                  <v-icon class="hidden-md-and-up">
                     mdi-cancel
                   </v-icon>
                 </v-col>
