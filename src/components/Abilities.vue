@@ -31,17 +31,20 @@
       <v-col cols="6" class="pl-1">
         <v-card raised class="mt-1 pb-0">
           <v-col>
-            <v-card-text>
+            <v-card-text class="pa-1">
               <v-row
                 v-for="skill in item.skills"
                 :key="skill.name"
                 class="caption"
                 align="center"
               >
-                <v-col cols="6" class="mx-0 pa-0">
+                <v-col cols="2" class="pa-0">
+                  <v-checkbox color="green" class="pt-0"></v-checkbox>
+                </v-col>
+                <v-col cols="5" class="mr-0 pl-1 pa-0">
                   {{ skill.name }}
                 </v-col>
-                <v-col cols="6" class="mt-0 pt-0 pa-0">
+                <v-col cols="5" class="mt-0 pt-0 pa-0">
                   <v-text-field
                     class="skill_text_field"
                     outlined
@@ -61,7 +64,6 @@
 <script>
 export default {
   name: "Abilities",
-
   data: () => ({
     abilities: [
       {

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app dark color="primary">
+  <v-app-bar app dark>
     <v-app-bar-nav-icon class="hidden-md-and-up" @click="toggleDrawer" />
     <v-toolbar-title class="headline text-uppercase">
       <span class="hidden-md-and-up">D&D Charsheet</span>
